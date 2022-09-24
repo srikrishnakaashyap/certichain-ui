@@ -1,0 +1,33 @@
+<!-- <app-data-table [certificatesData] = "certificatesData"></app-data-table> -->
+
+<div class="row mt-5" *ngIf="!router.url.includes('certificate-data')">
+    <div class="col">
+
+    <table class="table">
+        <tbody>
+            <tr *ngFor="let rowData of CertificatesData">
+                <!-- <td *ngFor="let column of columns">
+                    {{rowData[column.columnValue] | format:column.filter}}
+                </td>
+                <td (click)="LinktoCity(column.city)">{{city}}</td> -->
+                <td>{{ rowData[0] }}</td>
+
+                <!-- <div *ngIf="shoud_open=='true'"> -->
+                <td routerLink="/certificate-data/: rowData[1] " routerLinkActive="active">
+                    <button>View Certificate</button>
+                </td>
+                <!-- </div> -->
+                <!-- <td><button mat-flat-button color="primary" (click) = "viewCertificate(rowData[1])">View Certificate</button> -->
+                <!-- <a>{{ rowData[1] }}</a> -->
+                <!-- <div *ngIf="shouldOpen=='true'">
+                    temp
+                    <app-certificate-data></app-certificate-data>
+                 </div> -->
+                
+        
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+</div>
