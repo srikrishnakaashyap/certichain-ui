@@ -1,11 +1,11 @@
 <!-- <app-data-table [certificatesData] = "certificatesData"></app-data-table> -->
 
-<div class="row mt-5" *ngIf="!router.url.includes('certificate-data')">
-    <div class="col">
+<div class="row mt-5">
+    <div class="col-md-8">
 
-    <table class="table">
+    <table class="table table-bordered">
         <tbody>
-            <tr *ngFor="let rowData of CertificatesData">
+            <tr class="table-primary" *ngFor="let rowData of CertificatesData">
                 <!-- <td *ngFor="let column of columns">
                     {{rowData[column.columnValue] | format:column.filter}}
                 </td>
@@ -13,7 +13,7 @@
                 <td>{{ rowData[0] }}</td>
 
                 <!-- <div *ngIf="shoud_open=='true'"> -->
-                <td routerLink="/certificate-data/: rowData[1] " routerLinkActive="active">
+                <td routerLink="/certificate-data/{{ rowData[1] }}" routerLinkActive="active">
                     <button>View Certificate</button>
                 </td>
                 <!-- </div> -->

@@ -9,18 +9,31 @@ import { CertificateDataComponent } from './shared/components/certificate-data/c
 import { CertificateDataModule } from './shared/components/certificate-data.module';
 import { CertificateDataRoutingModule } from './shared/components/certificate-data-routing.module';
 import { RouterModule } from '@angular/router';
+import { AdminComponent } from './shared/components/admin/admin.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { HomeComponent } from './shared/components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FormBuilder } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CertificatesComponent,
-    CertificateDataComponent
+    AdminComponent,
+    HeaderComponent,
+    HomeComponent,
+    //CertificateDataComponent
   ],
   imports: [
     CertificateDataRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule
+    //MatRadioModule
     // RouterModule.forRoot([
     //   {path: 'certificate-data', component: CertificateDataComponent}
     // ]),

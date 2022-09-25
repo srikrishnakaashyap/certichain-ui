@@ -1,13 +1,19 @@
 .dashboard-title {
-    font-size: 30px;
+    font-size: 32px;
     text-align: center;
 }
 
 .certificates-title {
     font-size: 30px;
     text-align: center;
+    margin-top: 32px;
 }
 
-.main{
-    background-color: #b6d2be;
+/* .main{
+    background-color: #327044;
 }
+
+.body{
+
+    background-color: #327044;
+} */

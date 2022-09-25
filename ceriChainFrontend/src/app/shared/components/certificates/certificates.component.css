@@ -3,7 +3,8 @@ table, th  {
     border-collapse: collapse;
     padding: 18px;
     text-align: center;
-    margin-left: 214px;
+    margin-left: 0px;
+    margin-left: 252px;
   }
   table tr:nth-child(odd) {
     background-color: #f1f1f1;
@@ -16,12 +17,4 @@ table, th  {
     border: 1px solid grey;
     border-collapse: collapse;
     padding: 16px;
-  }
-
-  row mt-5  {
-    background-color: #518d6c;
-  }
-
-  body {
-    background-color: #b6d2be;
   }

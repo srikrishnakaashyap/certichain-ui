@@ -3,11 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { CertificateDataRoutingModule } from './certificate-data-routing.module';
 import { CertificateDataComponent } from './certificate-data/certificate-data.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { AdminComponent } from './admin/admin.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
   declarations: [
-    CertificateDataComponent
+    CertificateDataComponent,
+    //HomeComponent,
+    //HeaderComponent,
+    //AdminComponent,
+    //SignupComponent
   ],
   imports: [
     CommonModule,

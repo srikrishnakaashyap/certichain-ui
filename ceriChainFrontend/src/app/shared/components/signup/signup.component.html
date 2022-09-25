@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap Login Form with Avatar Image</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<body class="bg">
+<div class="login-form" > 
+    <!-- <form name="form" method="post"> -->
+        <div class="avatar">
+			<img src="https://innsida.ntnu.no/documents/10157/2548972475/user-profile-empty.png" alt="Avatar">
+		</div>
+        <h2 class="text-center">Member Login</h2>   
+        <!-- <div class="form-group"> -->
+        	<input type="text" class="form-control" id = "email" name="email" placeholder="Email" required="required">
+            <!-- <div *ngIf = "email && email.touched && email.invalid" class="alert alert-danger">
+                <div *ngIf="email.errors?.required">
+                    Please enter email
+                </div>
+                <div *ngIf="email.errors?.validateEmail">
+                    Please enter correct email format
+                </div>
+            </div> -->
+        <!-- </div> -->
+		<!-- <div class="form-group"> -->
+            <input type="password" id = "password" class="form-control" name="password" placeholder="Password" required="required">
+            <!-- <div *ngIf = "password && password.touched && password.invalid" class="alert alert-danger">
+                <div *ngIf="password.errors?.required">
+                    Please enter password
+                </div>
+            </div> -->
+        <!-- </div>         -->
+        <!-- <div class="form-group"> -->
+            <input type="submit" class="btn btn-primary btn-lg btn-block" (click)="login()">Sign in
+        <!-- </div> -->
+		<div class="bottom-action clearfix">
+            <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
+            <a href="#" class="float-right">Forgot Password?</a>
+        </div>
+<!-- 
+        <div class="alert alert-danger" role="alert" *ngIf = "isWrongUser">
+            No user found. Please sign up!
+        </div>
+
+        
+        <div class="alert alert-danger" role="alert" *ngIf = "isPassWrong">
+            Wrong password entered!
+        </div>
+		 -->
+    <!-- </form> -->
+    <p class="text-center small">Don't have an account? <a (click) = "routeToRegister()" routerLink = "/register" routerLinkActive = "active">Sign up here!</a></p>
+</div>
+</body>
+</html>
