@@ -20,23 +20,36 @@
 <div class="container">
     <div class="row">
       <div class="col-md-8" id="htmlData">
-        <table class="table table-bordered">
-          <tr class="table-primary">
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-          </tr>
-          <tr *ngFor="let user of USERS">
-            <th>{{user.id}}</th>
-            <td>{{user.name}}</td>
-            <td>{{user.email}}</td>
-            <td>{{user.phone}}</td>
-          </tr>
-        </table>
+        <table class="table" style="text-align: center;">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Student ID</th>
+              <th scope="col">School Name</th>
+              <th scope="col">Degree</th>
+              <th scope="col">Division</th>
+              <th scope="col">Year</th>
+              <th scope="col">Created At</th>
+              <th scope="col">Updated At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>799539747873521666 </td>
+              <td>799539747764600834</td>
+              <td>Masters</td>
+              <td>-</td>
+              <td>CS</td>
+              <td>2022</td>
+              <td>2022-09-25T01:49:27.110Z</td>
+              <td>2022-09-25T01:49:27.110Z</td>
+            </tr>
+            
+          </tbody>
+      </table>
       </div>
     </div>
     <div class="col-md-4 text-right">
-      <button class="btn btn-success btn-block" (click)="openPDF()" style="margin-left: 129px;">Download PDF</button>
+      <button class="btn btn-success btn-block"  (click)="openPDF()" style="margin-left: 129px;">Download PDF</button>
     </div>
   </div>

@@ -15,6 +15,7 @@ import { HomeComponent } from './shared/components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormBuilder } from '@angular/forms';
+import { IssuecertComponent } from './shared/components/issuecert/issuecert.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { FormBuilder } from '@angular/forms';
     AdminComponent,
     HeaderComponent,
     HomeComponent,
+    IssuecertComponent
     //CertificateDataComponent
   ],
   imports: [

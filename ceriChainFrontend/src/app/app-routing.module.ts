@@ -5,6 +5,7 @@ import { CertificateDataComponent } from './shared/components/certificate-data/c
 import { CertificatesComponent } from './shared/components/certificates/certificates.component';
 import { DashboardComponent } from './shared/components/dashboard/dashboard.component';
 import { HomeComponent } from './shared/components/home/home.component';
+import { IssuecertComponent } from './shared/components/issuecert/issuecert.component';
 import { SignupComponent } from './shared/components/signup/signup.component';
 
 //const routes: Routes = [];
@@ -30,9 +31,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot([
-    {path: 'certificate-data/:cid', component: CertificateDataComponent},
+    {path: 'certificate-data', component: CertificateDataComponent},
     //{path: 'certificates', component: CertificatesComponent}
     {path: 'login', component: SignupComponent},
+    {path: 'issuecert', component: IssuecertComponent},
     {path: 'register', component: HomeComponent},
     {path: 'admin', component: AdminComponent},
     {path: 'dashboard', component: DashboardComponent},

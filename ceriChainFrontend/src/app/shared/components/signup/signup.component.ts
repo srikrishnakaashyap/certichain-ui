@@ -106,6 +106,9 @@ export class SignupComponent implements OnInit {
       console.log("res--"+ result.status);
       console.log("res--"+ result.role);
 
+      localStorage.setItem('token',result.token);
+
+
       //result.role = 400;
 
       if(result.role == "250"){

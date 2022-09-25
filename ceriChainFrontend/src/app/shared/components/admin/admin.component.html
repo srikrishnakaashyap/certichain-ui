@@ -44,7 +44,7 @@
                 </div>
           </div> 
 
-            <div *ngIf = "visible">
+            
             <table class="table">
               <thead class="thead-dark">
                 <tr>
@@ -54,18 +54,18 @@
                 </tr>
               </thead>
               <tbody>
-                <div *ngFor = "let item of results; let i = index">
+                <ng-container *ngFor = "let item of results; let i = index">
                   <tr>
-                    <td>{{ i+1 }}</td>
-                    <td>{{item.firstName}}</td>
+                    <td> {{i+1}} </td>
+                    <td><a (click)="viewcert(item.id)" >{{item.firstName}} </a></td>
                     <td> Edit </td>
                   </tr>
 
-                </div>
+                </ng-container>
 
               </tbody>
             </table>
-            </div>
+            
           
         </div>
     </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { AuthServiceService } from '../../auth-service.service';
 import { DataService } from '../../data.service';
 //import {MatRadioModule} from '@angular/material/radio';
 
@@ -18,7 +20,7 @@ export class AdminComponent implements OnInit {
   
   
 
-  constructor(private dataService : DataService) { 
+  constructor(private dataService : DataService, private router: Router, private authService: AuthServiceService) { 
     //this.results = ['Name1', 'Name2', 'Name3', 'Name4', 'Name5'];
 
     console.log(this.results)
@@ -47,6 +49,13 @@ export class AdminComponent implements OnInit {
   private extractData(res: Response) {
     let body = res.json();
     return body || {};
+  }
+
+  viewcert(id : any){
+
+    this.authService.setAdminCertificateId(id);
+
+    this.router.navigateByUrl('/issuecert');
   }
 
   searchfun(){

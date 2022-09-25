@@ -125,4 +125,48 @@ export class DataService {
     return this.http.post(apiUrl+"/search", payload1);
 
   }
+
+  getStudentsData(token : any) : Observable<any>{
+
+    //const token = localStorage.getItem('token');
+
+    //let header = new HttpHeaders().set("x-access-token", headers).set("Content-Type", "application/x-www-form-urlencoded");
+
+    //const headers = { 'content-type': 'x-www-form-urlencoded'};
+
+    const apiUrl  = environment.BACKEND_URL;
+
+    const payload1 = new HttpParams()
+    .set('token', token);
+    //.set('queryType', queryType);
+    
+    return this.http.post(apiUrl+"/studentdashboard", payload1);
+
+  }
+
+  getCertificateData(cid : any): Observable<any>{
+
+    const apiUrl  = environment.BACKEND_URL;
+
+    const payload1 = new HttpParams()
+    .set('cid', cid);
+    //.set('queryType', queryType);
+    
+    return this.http.post(apiUrl+"/filecontents", payload1);
+
+  }
+
+  getAdminCertificateData(id : any) : Observable<any>{
+
+    const apiUrl  = environment.BACKEND_URL;
+
+    console.log("url--"+ apiUrl);
+
+    const payload1 = new HttpParams()
+    .set('id', id);
+
+    return this.http.post(apiUrl+"/cert", payload1);
+
+  }
+  
 }
